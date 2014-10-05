@@ -1,0 +1,38 @@
+import os.path
+import webbrowser
+import linecache
+
+
+#creates the user info file 
+while os.path.isfile('c:/Python27/exper/new.txt') == False:
+
+    write = open('c:/Python27/exper/new.txt', 'w')
+    write.write("www.google.com \n")
+    write.close()
+    
+    
+    if os.path.isfile('c:/Python27/exper/new.txt') == True:
+        continue
+                
+    break
+#info to be applied to gui for end user
+
+#appends the user info file for new data
+#editing = open('c:/Python27/exper/new.txt', 'a')
+#editing.write(raw_input('Enter your game link:\n ' ))
+#prevents one huge ass line of user input in the .txt file
+#editing.write('\n')
+#editing.close()
+
+#delete when finished
+#checks that the file is appended
+disp = open('c:/Python27/exper/new.txt', 'r')
+print disp.read()
+disp.close()
+
+#opens lines from text in web browser
+test = 1
+#print webbrowser.open(linecache.getline('c:/Python27/exper/new.txt', test))
+print test + 1
+print webbrowser.open(linecache.getline('c:/Python27/exper/new.txt', test))
+ 
